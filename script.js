@@ -34,7 +34,7 @@ function playGame(playerChoice){
     }
 
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
-    computerDisplay.textContent = `Computer: ${computerChoice}`;
+    computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
     resultDisplay.textContent = result;
 
     resultDisplay.classList.remove("greenText", "redText");
@@ -51,6 +51,23 @@ function playGame(playerChoice){
             computerScoreDisplay.textContent = computerScore;
             break;
     }
+   
+    // Check if either player's or computer's score reaches 5
+    if (playerScore === 5 || computerScore === 5) {
+        // Reset scores to 0
+        playerScore = 0;
+        computerScore = 0;
+        // Update the score display
+        playerScoreDisplay.textContent = playerScore;
+        computerScoreDisplay.textContent = computerScore;
+        // Display the game result message
+        if (playerScore === 5) {
+            resultDisplay.textContent = "Congratulations! You won the game!";
+        } else {
+            resultDisplay.textContent = "Sorry! You lost the game.";
+        }
+    }
 }
+
     
 

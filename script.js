@@ -11,6 +11,19 @@ const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 let playerScore = 0;
 let computerScore = 0;
 
+function askForName() {
+  // Prompt the user for their name
+  var playerName = prompt("Please enter your name:");
+  
+  // Check if the user entered a name
+  if (playerName != null && playerName != "") {
+      // Update the "Player" text with the user's name
+      document.getElementById("playerDisplay").textContent = playerName + ": ";
+  }
+}
+
+
+
 function playGame(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * 3)]; // picks one of three choises
   let result = "";
@@ -71,3 +84,4 @@ function playGame(playerChoice) {
     computerScoreDisplay.textContent = computerScore;
   }
 }
+

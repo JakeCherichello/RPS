@@ -51,8 +51,8 @@ function playGame(playerChoice) {
   computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
   resultDisplay.textContent = result;
 
-  resultDisplay.classList.remove("greenText", "redText");
-  // changes the color of the text
+  resultDisplay.classList.remove("greenText", "redText");// changes the color of the text
+  
   switch (result) {
     case "YOU WIN!":
       resultDisplay.classList.add("greenText");
@@ -81,7 +81,7 @@ function playGame(playerChoice) {
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
   } else {
-    // If neither player nor computer has reached 5, continue the game
+    // If neither player or computer has reached 5, continue the game
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
   }
